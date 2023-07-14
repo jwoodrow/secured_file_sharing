@@ -1,0 +1,32 @@
+#!/usr/bin/env bash -l
+
+# Make sure we're at the root of the project repo
+cd "$(git rev-parse --show-toplevel)"
+
+echo "Checking for secrets"
+# Make a backup to restore
+cp .secrets.baseline .secrets.backup
+# Generate a new secret file from the baseline (to preserve filters and other options) using only the committed files
+detect-secrets scan --baseline .secrets.baseline `git diff --cached --name-only --diff-filter=ACM | tr '\n' ' '` > /dev/null 2>&1
+# parses the results array into filepath:linenumber,secret_hash for comparisons
+list_secrets() { jq -r '.results | keys[] as $key | "\($key):\(.[$key] | .[] | .line_number),\(.[$key] | .[] | .hashed_secret)"' "$1" | sort; }
+BASELINE_SECRETS=($(list_secrets .secrets.backup))
+NEW_SECRETS=($(list_secrets .secrets.baseline))
+# Only look at new changes (secrets that are no longer detected are a good thing)
+CHANGES=($(comm -23 <(printf "%s\n" "${NEW_SECRETS[@]}") <(printf "%s\n" "${BASELINE_SECRETS[@]}") | tr -d ' \t'))
+# Restore the original baseline file
+mv .secrets.backup .secrets.baseline
+if [ ${#CHANGES[@]} -eq 0 ]; then
+  printf "\n\033[32mSECRET CHECK SUCCEEDED\033[0m\n"
+else
+  printf "\n\033[31mSECRET CHECK FAILED:\033[0m Check your secrets and try again\n"
+  for new_secret in "${CHANGES[@]}"
+  do
+    secret=$(echo "$new_secret" | awk -F',' '{print $1}')
+
+    printf "\n\033[31m$secret\033[0m\n"
+  done
+  exit 1
+fi
+
+exit 0

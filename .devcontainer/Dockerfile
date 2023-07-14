@@ -16,12 +16,10 @@ RUN echo -e $EXPORT_CONFIG >> $HOME/.profile
 SHELL ["/bin/sh", "-l", "-c"]
 
 # Stage : Install dependencies
-RUN apk add --no-cache bash git jq nodejs npm vim
+RUN apk add --no-cache bash git openssh jq nodejs npm vim py-pip
 
 # Stage : Install detect-secrets
-RUN apk add --no-cache --virtual .detect-secrets-deps py-pip \
-  && pip install detect-secrets --break-system-packages \
-  && apk del .detect-secrets-deps
+RUN pip install detect-secrets --break-system-packages
 
 # Stage : Install node
 RUN npm config set prefix $HOME/.npm
