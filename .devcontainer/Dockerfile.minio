@@ -1,0 +1,6 @@
+FROM minio/mc
+
+COPY ./minio-entrypoint.sh /usr/local/bin/minio-entrypoint.sh
+RUN chmod +x /usr/local/bin/minio-entrypoint.sh
+
+ENTRYPOINT ["echo", "DONE"]

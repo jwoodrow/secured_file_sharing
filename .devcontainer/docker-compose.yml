@@ -1,0 +1,74 @@
+version: '3'
+name: sfs
+volumes:
+  bundle_cache:
+    name: 'sfs-bundle-cache'
+  vendor_cache:
+    name: 'sfs-vendor-cache'
+  minio_data:
+    name: 'sfs-minio-data'
+  yarn_cache:
+    name: 'sfs-yarn-cache'
+  node_modules_cache:
+    name: 'sfs-node-modules-cache'
+services:
+  minio:
+    image: minio/minio
+    container_name: sfs-service-minio
+    command: server -C /etc/minio --address ":7500" --console-address ":12543" /data
+    ports:
+      - 7500:7500
+      - 12543:12543
+    expose:
+      - 7500
+      - 12543
+    environment:
+      MINIO_ROOT_USER: ACCESS_KEY
+      MINIO_ROOT_PASSWORD: ACCESS_SECRET
+    volumes:
+      - 'minio_data:/data:delegated'
+    healthcheck:
+      test: ["CMD", "curl", "-Ifs", "http://localhost:7500/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 2
+      start_period: 10s
+    restart: unless-stopped
+  initialize_bucket:
+    build:
+      context: .
+      dockerfile: Dockerfile.minio
+    image: sfs_create_buckets
+    container_name: sfs-initialize-buckets
+    environment:
+      SERVER_URL: http://sfs-service-minio:7500
+      ACCESS_KEY: ACCESS_KEY
+      ACCESS_SECRET: ACCESS_SECRET
+      BUCKET_NAME: sfs-bucket
+      BUCKET_REGION: eu-west-3
+    entrypoint: minio-entrypoint.sh
+  sfs:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    image: sfs-base
+    container_name: sfs
+    volumes:
+      - '..:/app:cached'
+      - vendor_cache:/app/vendor/cache:delegated
+      - bundle_cache:/app/vendor/bundle:delegated
+      - node_modules_cache:/app/node_modules:cached
+      - yarn_cache:/app/vendor/yarn-cache:cached
+    network_mode: host
+    stdin_open: true
+    tty: true
+    environment:
+      BUNDLE_PATH: /app/vendor/bundle
+    env_file:
+      - ../.env
+      - ../.env.local
+    entrypoint: ['/bin/sh', '-l', '-c']
+    command: '"tail -f /dev/null"'
+    depends_on:
+      initialize_bucket:
+        condition: service_completed_successfully

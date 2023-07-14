@@ -1,0 +1,30 @@
+{
+  "recommendations": [
+    "alefragnani.bookmarks",
+    "atishay-jain.all-autocomplete",
+    "bierner.markdown-preview-github-styles",
+    "christian-kohler.path-intellisense",
+    "davidanson.vscode-markdownlint",
+    "emmanuelbeziat.vscode-great-icons",
+    "esbenp.prettier-vscode",
+    "ethansk.restore-terminals",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "github.copilot-labs",
+    "github.copilot",
+    "humao.rest-client",
+    "janisdd.vscode-edit-csv",
+    "misogi.ruby-rubocop",
+    "naumovs.color-highlight",
+    "ow.vscode-subword-navigation",
+    "patbenatar.advanced-new-file",
+    "possan.nbsp-vscode",
+    "rebornix.ruby",
+    "shd101wyy.markdown-preview-enhanced",
+    "stkb.rewrap",
+    "visualstudioexptteam.intellicode-api-usage-examples",
+    "visualstudioexptteam.vscodeintellicode",
+    "wingrunr21.vscode-ruby",
+    "yzhang.markdown-all-in-one"
+  ]
+}

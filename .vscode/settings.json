@@ -1,0 +1,51 @@
+{
+  "files.insertFinalNewline": true,
+  "editor.tabSize": 2,
+  "cSpell.enabled": true,
+  "terminal.integrated.persistentSessionScrollback": 1000000,
+  "terminal.integrated.scrollback": 1000000,
+  "files.eol": "\n",
+  "code-eol.crlfCharacter": "↵",
+  "restoreTerminals.terminals": [
+    {
+      "splitTerminals": [
+        {
+          "name": "Bundle",
+          "commands": ["bundle install && exit 0"]
+        },
+        {
+          "name": "Yarn",
+          "commands": ["yarn install && exit 0"]
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "Rails",
+          "commands": ["bundle exec rails s"],
+          "shouldRunCommands": false
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "rails c",
+          "commands": ["bundle exec rails c"],
+          "shouldRunCommands": false
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "logs",
+          "commands": ["rm log/development.log && touch log/development.log && tail -f log/development.log"],
+          "shouldRunCommands": true
+        }
+      ]
+    }
+  ],
+  "restoreTerminals.runOnStartup": false
+}
