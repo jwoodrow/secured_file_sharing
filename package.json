@@ -1,0 +1,20 @@
+{
+  "name": "sfs",
+  "private": true,
+  "engines": {
+    "node": "20.4.0"
+  },
+  "scripts": {
+    "lint": "eslint **/*.es6",
+    "safe-upgrade": "yarn up -R '**'"
+  },
+  "browserslist": [
+    "defaults",
+    "ie <= 11",
+    "dead"
+  ],
+  "packageManager": "yarn@3.6.1",
+  "devDependencies": {
+    "eslint": "^8.44.0"
+  }
+}

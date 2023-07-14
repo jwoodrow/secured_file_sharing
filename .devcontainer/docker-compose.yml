@@ -67,7 +67,7 @@ services:
     env_file:
       - ../.env
       - ../.env.local
-    entrypoint: ['/bin/sh', '-l', '-c']
+    entrypoint: ['/bin/bash', '-c']
     command: '"tail -f /dev/null"'
     depends_on:
       initialize_bucket:

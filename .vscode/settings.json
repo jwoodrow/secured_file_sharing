@@ -23,7 +23,7 @@
       "splitTerminals": [
         {
           "name": "Rails",
-          "commands": ["bundle exec rails s"],
+          "commands": ["start_server"],
           "shouldRunCommands": false
         }
       ]
