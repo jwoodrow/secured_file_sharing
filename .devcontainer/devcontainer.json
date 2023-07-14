@@ -1,0 +1,53 @@
+{
+  "name": "Secured File Sharing",
+  "dockerComposeFile": "./docker-compose.yml",
+  "service": "sfs",
+  "workspaceFolder": "/app",
+  "shutdownAction": "stopCompose",
+  "forwardPorts": [3200],
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "alefragnani.bookmarks",
+        "atishay-jain.all-autocomplete",
+        "bierner.markdown-preview-github-styles",
+        "christian-kohler.path-intellisense",
+        "davidanson.vscode-markdownlint",
+        "emmanuelbeziat.vscode-great-icons",
+        "esbenp.prettier-vscode",
+        "ethansk.restore-terminals",
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag",
+        "github.copilot-labs",
+        "github.copilot",
+        "humao.rest-client",
+        "janisdd.vscode-edit-csv",
+        "misogi.ruby-rubocop",
+        "naumovs.color-highlight",
+        "ow.vscode-subword-navigation",
+        "patbenatar.advanced-new-file",
+        "possan.nbsp-vscode",
+        "rebornix.ruby",
+        "shd101wyy.markdown-preview-enhanced",
+        "stkb.rewrap",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "visualstudioexptteam.vscodeintellicode",
+        "wingrunr21.vscode-ruby",
+        "yzhang.markdown-all-in-one"
+      ],
+      "settings": {
+        "files.insertFinalNewline": true,
+        "editor.tabSize": 2,
+        "cSpell.enabled": true,
+        "terminal.integrated.persistentSessionScrollback": 1000000,
+        "terminal.integrated.scrollback": 1000000,
+        "files.eol": "\n",
+        "code-eol.crlfCharacter": "↵"
+      }
+    }
+  },
+  "postAttachCommand": "git config --global --add safe.directory /app && git config core.hooksPath .githooks"
+}
