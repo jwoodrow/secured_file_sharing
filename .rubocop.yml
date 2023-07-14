@@ -1,0 +1,1144 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+  - rubocop-rails
+AllCops:
+  Exclude: # Use folder/path/**/* to exclude a folder and its content
+    - 'README.md'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  TargetRubyVersion: 3.2
+  NewCops: disable
+
+#################### Rails ###########################
+
+Rails/ActionControllerTestCase:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ActionFilter:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ActiveRecordAliases:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ActiveRecordCallbacksOrder:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ActiveRecordOverride:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ActiveSupportAliases:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/AddColumnIndex:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/AfterCommitOverride:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ApplicationController:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ApplicationJob:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ApplicationMailer:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ApplicationRecord:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ArelStar:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/AssertNot:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/AttributeDefaultBlockValue:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/BelongsTo:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/Blank:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/BulkChangeTable:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/CompactBlank:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ContentTag:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/CreateTableWithTimestamps:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/Date:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/DefaultScope:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/Delegate:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/DelegateAllowBlank:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/DeprecatedActiveModelErrorsMethods:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/DotSeparatedKeys:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/DuplicateAssociation:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/DuplicateScope:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/DurationArithmetic:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/DynamicFindBy:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/EagerEvaluationLogMessage:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/EnumHash:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/EnumUniqueness:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/EnvironmentComparison:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/EnvironmentVariableAccess:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/Exit:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ExpandedDateRange:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/FilePath:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/FindBy:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/FindById:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/FindEach:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/HelperInstanceVariable:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/HttpPositionalArguments:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/HttpStatus:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/I18nLazyLookup:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/I18nLocaleAssignment:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/I18nLocaleTexts:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/IgnoredSkipActionFilterOption:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/IndexBy:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/IndexWith:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/Inquiry:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/InverseOf:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/LexicallyScopedActionFilter:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/LinkToBlank:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/MailerName:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/MatchRoute:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/MigrationClassName:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/NegateInclude:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/NotNullColumn:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/OrderById:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/Output:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/OutputSafety:
+  Enabled: true
+  AutoCorrect: false
+
+Rails/Pick:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/Pluck:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/PluckId:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/PluckInWhere:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/PluralizationGrammar:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/Presence:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/Present:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/RakeEnvironment:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ReadWriteAttribute:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/RedundantAllowNil:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/RedundantForeignKey:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/RedundantPresenceValidationOnBelongsTo:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/RedundantReceiverInWithOptions:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/RedundantTravelBack:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ReflectionClassName:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/RefuteMethods:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/RelativeDateConstant:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/RenderInline:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/RenderPlainText:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/RequestReferer:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/RequireDependency:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ReversibleMigration:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ReversibleMigrationMethodDefinition:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/RootJoinChain:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/RootPublicPath:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/SafeNavigation:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/SafeNavigationWithBlank:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/SaveBang:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/SchemaComment:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ScopeArgs:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ShortI18n:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/SkipsModelValidations:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/SquishedSQLHeredocs:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/StripHeredoc:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/TableNameAssignment:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/TimeZone:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/TimeZoneAssignment:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/ToFormattedS:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/TransactionExitStatement:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/UniqBeforePluck:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/UnknownEnv:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/UnusedIgnoredColumns:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/Validation:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/WhereEquals:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/WhereExists:
+  Enabled: false
+  AutoCorrect: false
+
+Rails/WhereNot:
+  Enabled: false
+  AutoCorrect: false
+
+#################### Layout ###########################
+
+Layout/ParameterAlignment:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedStyle: with_fixed_indentation
+
+Layout/HashAlignment:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedHashRocketStyle: key
+  EnforcedColonStyle: table
+  EnforcedLastArgumentHashStyle: always_inspect
+
+Layout/LineLength:
+  Exclude:
+    - 'db/**/*'
+  Enabled: true
+  AutoCorrect: true
+  Max: 126 # Github fixed web line length
+  AllowHeredoc: true
+  AllowURI: true
+  URISchemes: http, https
+  IgnoreCopDirectives: true
+
+Layout/IndentationConsistency:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedStyle: indented_internal_methods
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedStyle: indented
+
+Layout/BeginEndAlignment:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedStyleAlignWith: begin
+  Severity: warning
+
+Layout/BlockAlignment:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedStyleAlignWith: start_of_block
+
+Layout/ClassStructure:
+  Enabled: true
+  AutoCorrect: false # This cop should be safe, but it's not...
+
+Layout/ExtraSpacing:
+  Enabled: true
+  AutoCorrect: true
+  AllowForAlignment: true
+  AllowBeforeTrailingComments: true
+  ForceEqualSignAlignment: false
+
+Layout/FirstArrayElementLineBreak:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/FirstHashElementLineBreak:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/FirstMethodArgumentLineBreak:
+  Enabled: false
+  AutoCorrect: false
+
+Layout/FirstMethodParameterLineBreak:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/MultilineArrayLineBreaks:
+  Enabled: false
+  AutoCorrect: false
+
+Layout/MultilineHashKeyLineBreaks:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/MultilineMethodArgumentLineBreaks:
+  Enabled: false
+  AutoCorrect: false
+
+Layout/MultilineAssignmentLayout:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedStyle: same_line
+
+Layout/RedundantLineBreak: # Desactivated since it causes infinite loop!
+  Enabled: false
+  AutoCorrect: false
+  InspectBlocks: false
+
+Layout/EmptyLineBetweenDefs:
+  Enabled: true
+  AutoCorrect: true
+  EmptyLineBetweenMethodDefs: true
+  EmptyLineBetweenClassDefs: true
+  EmptyLineBetweenModuleDefs: true
+  AllowAdjacentOneLineDefs: true
+  NumberOfEmptyLines: 1
+
+Layout/LineEndStringConcatenationIndentation:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedStyle: aligned
+
+Layout/ArgumentAlignment:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedStyle: with_first_argument
+
+Layout/BlockEndNewline:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/ClosingParenthesisIndentation:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/FirstArgumentIndentation:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedStyle: special_for_inner_method_call_in_parentheses
+
+Layout/FirstArrayElementIndentation:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedStyle: special_inside_parentheses
+
+Layout/FirstHashElementIndentation:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedStyle: special_inside_parentheses
+
+Layout/FirstParameterIndentation:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedStyle: consistent
+
+Layout/IndentationWidth:
+  Enabled: true
+  AutoCorrect: true
+  Width: 2
+
+Layout/MultilineBlockLayout:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/MultilineHashBraceLayout:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedStyle: symmetrical
+
+Layout/ArrayAlignment:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/AssignmentIndentation:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/ClosingHeredocIndentation:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/ElseAlignment:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/EmptyLines:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/EmptyLinesAroundAccessModifier:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/EndAlignment:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/LeadingEmptyLines:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/MultilineArrayBraceLayout:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/MultilineMethodCallBraceLayout:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/RescueEnsureAlignment:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/SpaceBeforeBlockBraces:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/SpaceBeforeComma:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/SpaceBeforeFirstArg:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/SpaceInsideParens:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/SpaceInsidePercentLiteralDelimiters:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/TrailingEmptyLines:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/TrailingWhitespace:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/CommentIndentation:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/LeadingCommentSpace:
+  Enabled: true
+  AutoCorrect: true
+
+Layout/SpaceInsideBlockBraces:
+  Enabled: true
+  AutoCorrect: true
+
+#################### Lint ################################
+
+Lint/AmbiguousAssignment:
+  Enabled: true
+  AutoCorrect: false # Autocorrect not supported
+
+Lint/AmbiguousRange:
+  Enabled: true
+  AutoCorrect: false # Not safe
+  RequireParenthesesForMethodChains: false
+
+Lint/DeprecatedConstants:
+  Enabled: true
+  AutoCorrect: true
+
+Lint/DuplicateBranch:
+  Enabled: true
+  AutoCorrect: false # Autocorrect not supported
+  IgnoreLiteralBranches: false
+  IgnoreConstantBranches: false
+
+Lint/DuplicateRegexpCharacterClassElement:
+  Enabled: true
+  AutoCorrect: true
+
+Lint/EmptyBlock:
+  Enabled: true
+  AutoCorrect: false # Autocorrect not supported
+  AllowComments: true
+  AllowEmptyLambdas: true
+
+Lint/EmptyClass:
+  Enabled: true
+  AutoCorrect: false # Autocorrect not supported
+  AllowComments: true
+
+Lint/EmptyInPattern:
+  Enabled: true
+  AutoCorrect: false # Autocorrect not supported
+  AllowComments: true
+
+Lint/HeredocMethodCallPosition:
+  Enabled: true
+  AutoCorrect: true
+
+Lint/LambdaWithoutLiteralBlock:
+  Enabled: true
+  AutoCorrect: true
+
+Lint/NoReturnInBeginEndBlocks:
+  Enabled: true
+  AutoCorrect: false # Autocorrect not supported
+
+Lint/NumberedParameterAssignment:
+  Enabled: true
+  AutoCorrect: false # Autocorrect not supported
+
+Lint/OrAssignmentToConstant:
+  Enabled: true
+  AutoCorrect: false # Not safe
+
+Lint/RedundantDirGlobSort:
+  Enabled: true
+  AutoCorrect: true
+
+Lint/SymbolConversion:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedStyle: consistent
+
+Lint/ToEnumArguments:
+  Enabled: true
+  AutoCorrect: false # Autocorrect not supported
+
+Lint/TripleQuotes:
+  Enabled: true
+  AutoCorrect: true
+
+Lint/UnexpectedBlockArity:
+  Enabled: true
+  AutoCorrect: false # Autocorrect not supported
+
+Lint/UnmodifiedReduceAccumulator:
+  Enabled: true
+  AutoCorrect: false # Autocorrect not supported
+
+Lint/ParenthesesAsGroupedExpression:
+  Enabled: true
+  AutoCorrect: true
+
+Lint/PercentStringArray:
+  Enabled: true
+  AutoCorrect: true
+
+#################### Metrics ###############################
+
+Metrics/ClassLength:
+  CountAsOne: ['array', 'hash']
+  Max: 500
+
+Metrics/ModuleLength:
+  CountAsOne: ['array', 'hash']
+  Max: 250
+
+Metrics/AbcSize:
+  Max: 50
+
+Metrics/CyclomaticComplexity:
+  Max: 25
+
+Metrics/MethodLength:
+  CountAsOne: ['array', 'hash']
+  Max: 25
+
+Metrics/PerceivedComplexity:
+  Max: 12
+
+Metrics/BlockLength:
+  Exclude:
+    - 'db/**/*'
+
+#################### Naming ##############################
+
+Naming/RescuedExceptionsVariableName:
+  Enabled: true # Rubocop contradicts himself
+  PreferredName: exception
+
+Naming/InclusiveLanguage:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: true
+  EnforcedStyle: non_integer
+
+#################### Style ###############################
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false # Default in ruby 3, so don't need to worry about, except we go some memory leaks
+
+Style/PercentLiteralDelimiters:
+  Enabled: true
+  AutoCorrect: true
+
+Style/NestedTernaryOperator:
+  Enabled: false
+
+Style/ArgumentsForwarding:
+  Enabled: true
+  AutoCorrect: true
+  AllowOnlyRestArgument: true
+
+Style/AutoResourceCleanup:
+  Enabled: true
+  AutoCorrect: false # Autocorrect not supported
+
+Style/ClassMethodsDefinitions:
+  Enabled: false
+  AutoCorrect: false
+  EnforcedStyle: def_self
+
+Style/CollectionCompact:
+  Enabled: true
+  AutoCorrect: false # Not safe
+
+Style/CollectionMethods:
+  Enabled: true
+  AutoCorrect: false # Not safe
+
+Style/ConstantVisibility:
+  Enabled: true
+  AutoCorrect: false # Autocorrect not supported
+  IgnoreModules: false
+
+Style/DateTime:
+  Enabled: true
+  AutoCorrect: false # Not safe
+  AllowCoercion: false
+
+Style/DisableCopsWithinSourceCodeDirective:
+  Enabled: true
+  AutoCorrect: true
+  AllowedCops:
+    - Naming/VariableNumber
+
+Style/DocumentDynamicEvalDefinition:
+  Enabled: false
+
+Style/HashConversion:
+  Enabled: true
+  AutoCorrect: true
+  AllowSplatArgument: true
+
+Style/HashExcept:
+  Enabled: true
+  AutoCorrect: true
+
+Style/IfWithBooleanLiteralBranches:
+  Enabled: true
+  AutoCorrect: false # Not safe
+  AllowedMethods: ['nonzero?']
+
+Style/ImplicitRuntimeError:
+  Enabled: false
+  AutoCorrect: false # Autocorrect not supported
+
+Style/InPatternThen:
+  Enabled: true
+  AutoCorrect: true
+
+Style/IpAddresses:
+  Enabled: true
+  AutoCorrect: false # Autocorrect not supported
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
+
+Style/MethodCalledOnDoEndBlock:
+  Enabled: true
+  AutoCorrect: false # Autocorrect not supported
+
+Style/MultilineInPatternThen:
+  Enabled: true
+  AutoCorrect: true
+
+Style/MultilineMethodSignature:
+  Enabled: true
+  AutoCorrect: true
+
+Style/NegatedIfElseCondition:
+  Enabled: true
+  AutoCorrect: true
+
+Style/NilLambda:
+  Enabled: false
+
+Style/OptionHash:
+  Enabled: true
+  AutoCorrect: false # Autocorrect not supported
+  SuspiciousParamNames: options, opts, args, params, parameters
+  Allowlist: []
+
+Style/QuotedSymbols:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedStyle: same_as_string_literals
+
+Style/RedundantArgument:
+  Enabled: true
+  AutoCorrect: false # Not safe
+
+Style/RedundantSelfAssignmentBranch:
+  Enabled: true
+  AutoCorrect: true
+
+Style/RegexpLiteral:
+  Enabled: true
+  AutoCorrect: true
+  EnforcedStyle: slashes
+  AllowInnerSlashes: false
+
+Style/ReturnNil:
+  Enabled: false
+
+Style/StringChars:
+  Enabled: true
+  AutoCorrect: false # Not safe
+
+Style/StringHashKeys:
+  Enabled: true
+  AutoCorrect: false # Not safe
+
+Style/StringMethods:
+  Enabled: true
+  AutoCorrect: true
+
+Style/SwapValues:
+  Enabled: true
+  AutoCorrect: false # Not safe
+
+Style/TopLevelMethodDefinition:
+  Enabled: true
+  AutoCorrect: false # Autocorrect not supported
+
+Style/TrailingCommaInBlockArgs:
+  Enabled: true
+  AutoCorrect: false # Not safe
+
+Style/UnlessLogicalOperators:
+  Enabled: true
+  AutoCorrect: false # Autocorrect not supported
+  EnforcedStyle: forbid_mixed_logical_operators
+
+Style/Alias:
+  Enabled: true
+  AutoCorrect: true
+
+Style/BlockDelimiters:
+  Enabled: true
+  AutoCorrect: true
+
+Style/ClassEqualityComparison:
+  Enabled: true
+  AutoCorrect: true
+
+Style/EvalWithLocation:
+  Enabled: true
+  AutoCorrect: true
+
+Style/IfUnlessModifier:
+  Enabled: true
+  AutoCorrect: true
+
+Style/Lambda:
+  Enabled: true
+  AutoCorrect: true
+
+Style/LambdaCall:
+  Enabled: false
+
+Style/MultilineTernaryOperator:
+  Enabled: true
+  AutoCorrect: true
+
+Style/StringLiterals:
+  Enabled: true
+  AutoCorrect: true
+
+Style/NestedParenthesizedCalls:
+  Enabled: true
+  AutoCorrect: true
+
+Style/HashTransformKeys:
+  Enabled: true
+  AutoCorrect: false # Not safe
+
+Style/StringConcatenation:
+  Enabled: true
+  AutoCorrect: false # Not safe
+
+Style/CommentAnnotation:
+  Enabled: true
+  AutoCorrect: true
+
+Style/NumericLiterals:
+  Enabled: true
+  AutoCorrect: true
+
+#################### RSpec ###############################
+
+RSpec/DescribedClass:
+  Enabled: true
+  AutoCorrect: false # Not safe
+
+RSpec/EmptyLineAfterExample:
+  Enabled: true
+  AutoCorrect: true
+
+RSpec/EmptyLineAfterFinalLet:
+  Enabled: true
+  AutoCorrect: true
+
+RSpec/ExampleLength:
+  Enabled: true
+  Max: 10
+
+RSpec/FilePath:
+  Enabled: true
+  SpecSuffixOnly: true
+
+RSpec/ImplicitSubject:
+  Enabled: true
+  AutoCorrect: true
+
+RSpec/MultipleExpectations:
+  Enabled: true
+  Max: 10
+
+RSpec/NestedGroups:
+  Enabled: true
+  Max: 10
+
+#################### Security ###############################
+
+Security/CompoundHash:
+  Enabled: true
+  AutoCorrect: false
+
+Security/Eval:
+  Enabled: true
+  AutoCorrect: false
+
+Security/IoMethods:
+  Enabled: true
+  AutoCorrect: false # Not safe
+
+Security/JSONLoad:
+  Enabled: true
+  AutoCorrect: false # Not safe
+
+Security/MarshalLoad:
+  Enabled: true
+  AutoCorrect: false
+
+Security/Open:
+  Enabled: true
+  AutoCorrect: false
+
+Security/YAMLLoad:
+  Enabled: true
+  AutoCorrect: false # Not safe

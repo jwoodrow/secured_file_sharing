@@ -31,6 +31,15 @@
     {
       "splitTerminals": [
         {
+          "name": "CSS",
+          "commands": ["yarn build:css --watch"],
+          "shouldRunCommands": false
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
           "name": "rails c",
           "commands": ["bundle exec rails c"],
           "shouldRunCommands": false

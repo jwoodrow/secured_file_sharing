@@ -6,7 +6,8 @@
   },
   "scripts": {
     "lint": "eslint **/*.es6",
-    "safe-upgrade": "yarn up -R '**'"
+    "safe-upgrade": "yarn up -R '**'",
+    "build:css": "sass ./app/assets/stylesheets/application.sass:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
   },
   "browserslist": [
     "defaults",
@@ -16,5 +17,9 @@
   "packageManager": "yarn@3.6.1",
   "devDependencies": {
     "eslint": "^8.44.0"
+  },
+  "dependencies": {
+    "@rails/ujs": "^7.0.6",
+    "sass": "^1.63.6"
   }
 }

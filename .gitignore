@@ -69,3 +69,9 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 /public/uploads
+
+/app/assets/builds/*
+!/app/assets/builds/.keep
+
+# detect-secrets
+.secrets.backup
